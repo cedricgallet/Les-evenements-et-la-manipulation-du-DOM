@@ -6,13 +6,16 @@
 
 //FONCTION FLECHÉE
 
-let size = () => {
-
-     document.getElementById("taille");
-     taille.style.width = "100%";
-};
 
 document.getElementById("taille").addEventListener("click",function(){
-     size();
+     
+     this.src="assets/img/finDuMonde.jpeg";
 });
-
+document.getElementById("taille").addEventListener("mouseover",function(){
+     
+     this.style.width="100%";
+});
+document.getElementById("taille").addEventListener("click",function(){
+     
+     this.style.width="";
+});

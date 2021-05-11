@@ -1,21 +1,25 @@
-// Fonction + password avec
+// Ecouter la modification de l'email
 
-// Au moins 1 caractère majuscule.
-// Au moins 1 caractère minuscule.
-// Au moins 1 chiffre.
-// Au moins 1 caractère spécial.
-// Minimum 10 caractères.
+let mail = document.getElementById("mail").value;
 
-// function validate() { 
-//     var msg; 
-//     var str = document.getElementById("mdp").value; 
-//     if (str.match( /[0-9]/g) && 
-//             str.match( /[A-Z]/g) && 
-//             str.match(/[a-z]/g) && 
-//             str.match( /[^a-zA-Z\d]/g) &&
-//             str.length >= 10) 
-//         msg = "<p style='color:green'>Mot de passe fort.</p>"; 
-//     else 
-//         msg = "<p style='color:red'>Mot de passe faible.</p>"; 
-//     document.getElementById("msg").innerHTML= msg; 
-// } 
+// ********************Validation EMAIL***********************
+
+
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+document.getElementById("mail").addEventListener("click",function(){
+    if (mail.test(regex)) {
+        small.innerHTML = "Adresse Valide";
+        small.classList.remove("text-danger");
+        small.classList.add("text-sucess");
+       
+    } else {
+        small.innerHTML = "Adresse Invalide";
+        small.classList.remove("text-success");
+        small.classList.add("text-danger");
+        
+    }
+
+});
+
+   
