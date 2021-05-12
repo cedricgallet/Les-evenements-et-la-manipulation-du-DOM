@@ -1,6 +1,7 @@
 .prenom:focus {
     outline: none;
     border-color: black;
+    border-style: solid;
   }
 
  
